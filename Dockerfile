@@ -7,7 +7,7 @@ COPY package*.json ./
 
 FROM base as dev
 
-RUN npm install
+RUN npm cache clean --force && npm install
 
 COPY . .
 
